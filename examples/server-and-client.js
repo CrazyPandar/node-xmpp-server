@@ -34,8 +34,9 @@ var startServer = function(done) {
             cb(false)
         })
 
-        client.on('online', function() {
+        client.on('online', function(cb) {
             debug('ONLINE')
+            cb(null);
         })
 
         // Stanza handling
